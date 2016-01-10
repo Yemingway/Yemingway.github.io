@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="NodeJs,博客," />
+  <meta name="keywords" content="MongoDb," />
 
 
 
@@ -51,16 +51,19 @@
 
 
 
-<meta name="description" content="Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用">
+<meta name="description" content="MongoDb 简介
+MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nodejs 学习笔记">
-<meta property="og:url" content="http://yemingway.github.io/2016/01/10/NodeJs学习笔记/index.html">
+<meta property="og:title" content="MongoDb 操作">
+<meta property="og:url" content="http://yemingway.github.io/2016/01/10/MongoDb常用操作/index.html">
 <meta property="og:site_name" content="OLIVER‘S BLOG">
-<meta property="og:description" content="Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用">
-<meta property="og:updated_time" content="2016-01-10T13:23:28.000Z">
+<meta property="og:description" content="MongoDb 简介
+MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。">
+<meta property="og:updated_time" content="2016-01-10T13:29:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nodejs 学习笔记">
-<meta name="twitter:description" content="Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用">
+<meta name="twitter:title" content="MongoDb 操作">
+<meta name="twitter:description" content="MongoDb 简介
+MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。">
 
 
 
@@ -72,7 +75,7 @@
   };
 </script>
 
-  <title> Nodejs 学习笔记 | OLIVER‘S BLOG </title>
+  <title> MongoDb 操作 | OLIVER‘S BLOG </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -223,7 +226,7 @@
             
             
               
-                Nodejs 学习笔记
+                MongoDb 操作
               
             
           </h1>
@@ -232,7 +235,7 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-10T21:23:28+08:00" content="2016-01-10">
+            <time itemprop="dateCreated" datetime="2016-01-10T21:29:36+08:00" content="2016-01-10">
               2016-01-10
             </time>
           </span>
@@ -242,8 +245,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">学习笔记</span>
+                  <a href="/categories/Mongodb/" itemprop="url" rel="index">
+                    <span itemprop="name">Mongodb</span>
                   </a>
                 </span>
 
@@ -259,8 +262,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/10/NodeJs学习笔记/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/NodeJs学习笔记/" itemprop="commentsCount"></span>
+                <a href="/2016/01/10/MongoDb常用操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/10/MongoDb常用操作/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -279,98 +282,75 @@
       
 
       
-        <span itemprop="articleBody"><blockquote>
-<p>Node.js是一个基于Chrome JavaScript运行时建立的平台， 用于方便地搭建响应速度快、易于扩展的网络应用。Node.js 使用事件驱动， 非阻塞I/O 模型而得以轻量和高效，非常适合在分布式设备上运行的数据密集型的实时应用</p>
+        <span itemprop="articleBody"><h2 id="MongoDb__u7B80_u4ECB"><a href="#MongoDb__u7B80_u4ECB" class="headerlink" title="MongoDb 简介"></a>MongoDb 简介</h2><blockquote>
+<p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="ejs__u8BED_u6CD5"><a href="#ejs__u8BED_u6CD5" class="headerlink" title="ejs 语法"></a>ejs 语法</h2><p>ejs 三种标签</p>
+<h2 id="MongoDb__u5728nodejs_u4E2D_u4F7F_u7528"><a href="#MongoDb__u5728nodejs_u4E2D_u4F7F_u7528" class="headerlink" title="MongoDb 在nodejs中使用"></a>MongoDb 在nodejs中使用</h2><p>安装 MongoDB 很简单,去官网下载对应系统的 MongoDB 压缩包即可。解压后将文件夹重命名为 mongodb，并在 mongodb 文件夹里新建 blog 文件夹作为我们博客内容的存储目录。进入到 bin 目录下：运行：</p>
+<blockquote>
+<p>mongod –dbpath ../blog/<br>以上命令的意思是:设置 blog 文件夹作为我们工程的存储目录并启动数据库。</p>
+<p>use blog<br>db.posts.find({})</p>
+</blockquote>
+<p>查询所有的post数据</p>
+<h2 id="MongoDb__u64CD_u4F5C"><a href="#MongoDb__u64CD_u4F5C" class="headerlink" title="MongoDb 操作"></a>MongoDb 操作</h2><ol>
+<li><p>insert操作</p>
+<blockquote>
+<p>db.person.insert({‘name’:’jack’,’age’:20})</p>
+</blockquote>
+</li>
+<li><p>find操作</p>
+<blockquote>
+<p>db.person.find({‘name’:’joe’})</p>
+</blockquote>
+</li>
+<li><p>update 操作</p>
+<blockquote>
+<p>db.person.update({‘name’:’joe’},{‘name’:’joe’,’age’:25})<br>db.person.update({‘name’:’joe’},{$set:{‘age’:25}})<br>db.person.remove() 删除所有数据</p>
+</blockquote>
+</li>
+<li><p>mongodb 修改器($inc/$set/$unset/$push/$pop/upsert…)</p>
 <ul>
-<li>&lt;% code %&gt;:javascript 代码</li>
-<li>&lt;%=code %&gt;: 显示替换过的html特殊字符</li>
-<li>&lt;%- code %&gt;: 显示原始的html 内容</li>
+<li>数组修改器 $push 示例操作效果如下：<blockquote>
+<p><code>&gt; db.c.find()
+{ &quot;_id&quot; : ObjectId(&quot;5003be465af21ff428dafbe7&quot;), &quot;name&quot; : &quot;toyota&quot;, &quot;type&quot; : &quot;suv&quot;, 
+&quot;size&quot; : { &quot;height&quot; : 8, &quot;width&quot; : 7, &quot;length&quot; : 15 } }</code></p>
+</blockquote>
+</li>
+<li>先push一个当前文档中不存在的键title<blockquote>
+<p><code>&gt; db.c.update({&quot;name&quot; : &quot;toyota&quot;},{$push:{&quot;title&quot;:&quot;t1&quot;}})</code><br><code>&gt; db.c.find()
+{ &quot;_id&quot; : ObjectId(&quot;5003be465af21ff428dafbe7&quot;), &quot;name&quot; : &quot;toyota&quot;, &quot;size&quot; : { &quot;height&quot; : 8,
+&quot;width&quot; : 7, &quot;length&quot; : 15 }, &quot;title&quot; : [ &quot;t1&quot; ], &quot;type&quot; : &quot;suv&quot; }</code></p>
+</blockquote>
+</li>
+<li><p>再向title中push一个值</p>
+<blockquote>
+<p><code>&gt; db.c.update({&quot;name&quot; : &quot;toyota&quot;},{$push:{&quot;title&quot;:&quot;t2&quot;}})</code><br><code>&gt; db.c.find()
+{ &quot;_id&quot; : ObjectId(&quot;5003be465af21ff428dafbe7&quot;), &quot;name&quot; : &quot;toyota&quot;, &quot;size&quot; : { &quot;height&quot; : 8,
+&quot;width&quot; : 7, &quot;length&quot; : 15 }, &quot;title&quot; : [ &quot;t1&quot;, &quot;t2&quot; ], &quot;type&quot; : &quot;suv&quot; }</code></p>
+</blockquote>
+</li>
+<li><p>–再向title中push一个值</p>
+<blockquote>
+<p><code>&gt; db.c.update({&quot;name&quot; : &quot;toyota&quot;},{$push:{&quot;title&quot;:&quot;t2&quot;}})</code><br><code>&gt; db.c.find()
+{ &quot;_id&quot; : ObjectId(&quot;5003be465af21ff428dafbe7&quot;), &quot;name&quot; : &quot;toyota&quot;, &quot;size&quot; : { &quot;height&quot; : 8,
+&quot;width&quot; : 7, &quot;length&quot; : 15 }, &quot;title&quot; : [ &quot;t1&quot;, &quot;t2&quot;, &quot;t2&quot; ], &quot;type&quot; : &quot;suv&quot; }</code></p>
+</blockquote>
+</li>
+<li><p>–再向一个已经存在的键值非数组类型的键push一个值</p>
+<blockquote>
+<p><code>&gt; db.c.update({&quot;name&quot; : &quot;toyota&quot;},{$push:{&quot;size.height&quot;:10}})
+Cannot apply $push/$pushAll modifier to non-array</code><br><code>&gt; db.c.update({&quot;name&quot; : &quot;toyota&quot;},{$push:{&quot;name&quot;:&quot;ddddddd&quot;}})
+Cannot apply $push/$pushAll modifier to non-array</code></p>
+</blockquote>
+</li>
 </ul>
-<p>##路由规则</p>
-<p><strong>req.query</strong></p>
 <blockquote>
-<p>// GET /search?q=tobi+ferret<br>req.query.q<br>// =&gt; “tobi ferret”  </p>
-<p>// GET /shoes?order=desc&amp;shoe[color]=blue&amp;shoe[type]=converse<br>req.query.order<br>// =&gt; “desc”  </p>
-<p>req.query.shoe.color<br>// =&gt; “blue”  </p>
+<p>得出结论：$push–向文档的某个数组类型的键添加一个数组元素，不过滤重复的数据。添加时键存在，要求键值类型必须是数组；键不存在，则创建数组类型的键。</p>
 </blockquote>
-<p>req.query.shoe.type<br>// =&gt; “converse” </p>
-<p><strong>req.body</strong></p>
-<blockquote>
-<p>// POST user[name]=tobi&amp;user[email]=tobi@learnboost.com<br>req.body.user.name<br>// =&gt; “tobi”  </p>
-<p>req.body.user.email<br>// =&gt; “tobi@learnboost.com”  </p>
-<p>// POST { “name”: “tobi” }<br>req.body.name<br>// =&gt; “tobi”  </p>
-</blockquote>
-<p><strong> req.params</strong></p>
-<blockquote>
-<p>// GET /user/tj<br>req.params.name<br>// =&gt; “tj”  </p>
-<p>// GET /file/javascripts/jquery.js<br>req.params[0]<br>// =&gt; “javascripts/jquery.js”</p>
-</blockquote>
-<p><strong> req.param(name) </strong></p>
-<blockquote>
-<p>// ?name=tobi<br>req.param(‘name’)<br>// =&gt; “tobi”  </p>
-<p>// POST name=tobi<br>req.param(‘name’)<br>// =&gt; “tobi”  </p>
-<p>// /user/tobi for /user/:name<br>req.param(‘name’)<br>// =&gt; “tobi” </p>
-</blockquote>
-<h2 id="supervisor_u7684_u4F5C_u7528"><a href="#supervisor_u7684_u4F5C_u7528" class="headerlink" title="supervisor的作用"></a>supervisor的作用</h2><p>每次代码更新需要重启，有了这个模块就不用重新启动，<strong>更改代码就会生效</strong></p>
-<blockquote>
-<p>npm install -g supervisor</p>
-</blockquote>
-<p>安装过后的启动命令是</p>
-<blockquote>
-<p>supervisor app.js</p>
-</blockquote>
-<p>遇到一个错误</p>
-<blockquote>
-<p>Supervisor node .js “Program node app exited with code 0” error</p>
-</blockquote>
-<p>因为app.listen 不在 app.js内部，这种情况有可能在/bin/www中，所以要使用 supervisor ./bin/www</p>
-<h2 id="u9875_u9762_u901A_u77E5"><a href="#u9875_u9762_u901A_u77E5" class="headerlink" title="页面通知"></a>页面通知</h2><p>使用flash把一些错误或者成功信息传递到页面，他是session中的一个存储区域。<a href="https://github.com/jaredhanson/connect-flash" target="_blank" rel="external">(https://github.com/jaredhanson/connect-flash)</a></p>
-<hr>
-<h2 id="u4F1A_u8BDD"><a href="#u4F1A_u8BDD" class="headerlink" title="会话"></a>会话</h2><blockquote>
-<p>会话是一种持久的网络协议，用于完成服务器和客户端之间的一些交互行为。会话是一个比连接粒度更大的概念， 一次会话可能包含多次连接，每次连接都被认为是会话的一次操作。在网络应用开发中，有必要实现会话以帮助用户交互。例如网上购物的场景，用户浏览了多个页面，购买了一些物品，这些请求在多次连接中完成。许多应用层网络协议都是由会话支持的，如 FTP、Telnet 等，而 HTTP 协议是无状态的，本身不支持会话，因此在没有额外手段的帮助下，前面场景中服务器不知道用户购买了什么。</p>
-<p>为了在无状态的 HTTP 协议之上实现会话，Cookie 诞生了。Cookie 是一些存储在客户端的信息，每次连接的时候由浏览器向服务器递交，服务器也向浏览器发起存储 Cookie 的请求，依靠这样的手段服务器可以识别客户端。我们通常意义上的 HTTP 会话功能就是这样实现的。具体来说，浏览器首次向服务器发起请求时，服务器生成一个唯一标识符并发送给客户端浏览器，浏览器将这个唯一标识符存储在 Cookie 中，以后每次再发起请求，客户端浏览器都会向服务器传送这个唯一标识符，服务器通过这个唯一标识符来识别用户。 对于开发者来说，我们无须关心浏览器端的存储，需要关注的仅仅是如何通过这个唯一标识符来识别用户。很多服务端脚本语言都有会话功能，如 PHP，把每个唯一标识符存储到文件中。</p>
-<p>——《Node.js开发指南》</p>
-</blockquote>
-<h2 id="u4E2D_u95F4_u4EF6"><a href="#u4E2D_u95F4_u4EF6" class="headerlink" title="中间件"></a>中间件</h2><blockquote>
-<p>例如index.js中的代码</p>
-<p>  <code>router.get(&#39;/logout&#39;,checkLogin);
-   router.get(&#39;/logout&#39;, function (req, res) {
-      req.flash(&#39;success&#39;, &#39;登出成功！&#39;);
-      req.session.user = null;
-      res.redirect(&#39;/&#39;);
-   });
-   function checkLogin(req,res,next){
-     if(!req.session.user){
-       req.flash(&#39;error&#39;,&#39;用户未登录！&#39;);
-       res.redirect(&#39;/login&#39;);
-     }
-     next();
-   }</code></p>
-<p>启动程序的时候会顺序注册回调函数，当用户在此访问logout的页面，这个时候先回调用回调函数checklogin,如果没有next中间件，在user存在的情况下<br>就不会做flash用户未登录，以及跳转到login页面。 </p>
-</blockquote>
-<h2 id="u6CE8_u610F_u7684_u95EE_u9898"><a href="#u6CE8_u610F_u7684_u95EE_u9898" class="headerlink" title="注意的问题"></a>注意的问题</h2><ul>
-<li>错误<blockquote>
-<p>TypeError: Cannot set property ‘user’ of undefined</p>
-</blockquote>
+<p>4.sort() 方法排序 ｛a:1｝以a升序排列 -1 降序排列</p>
 </li>
-<li>解决<blockquote>
-<p>app.use (session()) 要在 app.use(‘/‘,routes)前面</p>
-</blockquote>
-</li>
-<li>app.use 和 app.get区别<blockquote>
-<p><a href="http://stackoverflow.com/questions/15601703/difference-between-app-use-and-app-get-in-express-js" target="_blank" rel="external">参照stackoverflow上的解释</a></p>
-<ol>
-<li>app.use()可以绑定中间件。并且app.use()可以处理各种请求<br>比如 GET/ POST PUT etc</li>
-<li>app.get() 当有http请求的时候（get请求）只能处理传递过来的路径的get请求。</li>
 </ol>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h3 id="setting_for_VS_Code"><a href="#setting_for_VS_Code" class="headerlink" title="setting for VS Code"></a>setting for VS Code</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="string">"version"</span>: <span class="string">"0.1.0"</span>,</span><br><span class="line">	<span class="comment">// List of configurations. Add new configurations or edit existing ones.</span></span><br><span class="line">	<span class="comment">// ONLY "node" and "mono" are supported, change "type" to switch.</span></span><br><span class="line">	<span class="string">"configurations"</span>: [</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">// Name of configuration; appears in the launch configuration drop down menu.</span></span><br><span class="line">			<span class="string">"name"</span>: <span class="string">"supervisor app.js"</span>,</span><br><span class="line">			<span class="comment">// Type of configuration. Possible values: "node", "mono".</span></span><br><span class="line">			<span class="string">"type"</span>: <span class="string">"node"</span>,</span><br><span class="line">			<span class="comment">// Workspace relative or absolute path to the program.</span></span><br><span class="line">			<span class="string">"program"</span>: <span class="string">"./bin/www"</span>,</span><br><span class="line">			<span class="comment">// Automatically stop program after launch.</span></span><br><span class="line">			<span class="string">"stopOnEntry"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="comment">// Command line arguments passed to the program.</span></span><br><span class="line">			<span class="string">"args"</span>: [],</span><br><span class="line">			<span class="comment">// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.</span></span><br><span class="line">			<span class="string">"cwd"</span>: <span class="string">"."</span>,</span><br><span class="line">			<span class="comment">// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.</span></span><br><span class="line">			<span class="string">"runtimeExecutable"</span>: <span class="literal">null</span>,</span><br><span class="line">			<span class="comment">// Optional arguments passed to the runtime executable.</span></span><br><span class="line">			<span class="string">"runtimeArgs"</span>: [<span class="string">"--nolazy"</span>],</span><br><span class="line">			<span class="comment">// Environment variables passed to the program.</span></span><br><span class="line">			<span class="string">"env"</span>: &#123; &#125;,</span><br><span class="line">			<span class="comment">// Use JavaScript source maps (if they exist).</span></span><br><span class="line">			<span class="string">"sourceMaps"</span>: <span class="literal">false</span>,</span><br><span class="line">			<span class="comment">// If JavaScript source maps are enabled, the generated code is expected in this directory.</span></span><br><span class="line">			<span class="string">"outDir"</span>: <span class="literal">null</span></span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"name"</span>: <span class="string">"Attach"</span>,</span><br><span class="line">			<span class="string">"type"</span>: <span class="string">"node"</span>,</span><br><span class="line">			<span class="comment">// TCP/IP address. Default is "localhost".</span></span><br><span class="line">			<span class="string">"address"</span>: <span class="string">"localhost"</span>,</span><br><span class="line">			<span class="comment">// Port to attach to.</span></span><br><span class="line">			<span class="string">"port"</span>: <span class="number">5858</span>,</span><br><span class="line">			<span class="string">"sourceMaps"</span>: <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+</span>
       
     </div>
 
@@ -378,9 +358,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/NodeJs/" rel="tag">#NodeJs</a>
-          
-            <a href="/tags/博客/" rel="tag">#博客</a>
+            <a href="/tags/MongoDb/" rel="tag">#MongoDb</a>
           
         </div>
       
@@ -389,13 +367,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/01/10/NodeJs学习笔记/" rel="next" title="Nodejs 学习笔记">
+                <i class="fa fa-chevron-left"></i> Nodejs 学习笔记
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/10/MongoDb常用操作/" rel="prev" title="MongoDb 操作">
-                MongoDb 操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -410,10 +388,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/10/NodeJs学习笔记/"
-     data-title="Nodejs 学习笔记"
+        <div class="ds-share flat" data-thread-key="2016/01/10/MongoDb常用操作/"
+     data-title="MongoDb 操作"
      data-content=""
-     data-url="http://yemingway.github.io/2016/01/10/NodeJs学习笔记/">
+     data-url="http://yemingway.github.io/2016/01/10/MongoDb常用操作/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -441,8 +419,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/10/NodeJs学习笔记/"
-           data-title="Nodejs 学习笔记" data-url="http://yemingway.github.io/2016/01/10/NodeJs学习笔记/">
+      <div class="ds-thread" data-thread-key="2016/01/10/MongoDb常用操作/"
+           data-title="MongoDb 操作" data-url="http://yemingway.github.io/2016/01/10/MongoDb常用操作/">
       </div>
     
   </div>
@@ -532,7 +510,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ejs__u8BED_u6CD5"><span class="nav-number">1.</span> <span class="nav-text">ejs 语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#supervisor_u7684_u4F5C_u7528"><span class="nav-number">2.</span> <span class="nav-text">supervisor的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u9875_u9762_u901A_u77E5"><span class="nav-number">3.</span> <span class="nav-text">页面通知</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4F1A_u8BDD"><span class="nav-number">4.</span> <span class="nav-text">会话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u4E2D_u95F4_u4EF6"><span class="nav-number">5.</span> <span class="nav-text">中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6CE8_u610F_u7684_u95EE_u9898"><span class="nav-number">6.</span> <span class="nav-text">注意的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#setting_for_VS_Code"><span class="nav-number">6.1.</span> <span class="nav-text">setting for VS Code</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDb__u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">MongoDb 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDb__u5728nodejs_u4E2D_u4F7F_u7528"><span class="nav-number">2.</span> <span class="nav-text">MongoDb 在nodejs中使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDb__u64CD_u4F5C"><span class="nav-number">3.</span> <span class="nav-text">MongoDb 操作</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
